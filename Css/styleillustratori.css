@@ -1,0 +1,193 @@
+@import url(font.css); /* importo il file css con le istruzioni per richiamare il file del carattere tipografico */
+
+body {
+    margin: 0 0;
+    background-color: #464646;
+    font-family: "Accademia", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+img {
+    max-width: 100%; /* per fare in modo che tutte le immagin si adattano all'elemento che le contiene */
+    display: block; /* per azzerare il margine sotto che le immagini hanno di default */
+}
+
+main {
+    max-width: 1000px;
+    margin: auto; /* centro l'elemento nella pagina */
+    padding: 20px;
+    background-color: #5B5B5B;
+}
+
+header a {
+    text-decoration: none;
+    color: #ffffff;
+    
+}
+
+header a:hover {
+    color: #f00;
+    text-decoration: underline;
+}
+
+header a.attivo {
+    font-weight: bold;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+    margin-bottom: 1%;
+}
+
+header p {
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+header nav ul {
+    margin:0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+section.hero {
+    background-color: black;
+    text-align: center;
+}
+
+
+section.hero h1 {
+    margin: 0;
+    padding: 40px 10px;
+    font-size: 40px;
+    color: white;
+}
+
+.grid {
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    gap: 20px;
+}
+
+main div.card {
+    background: #A3A3A3;
+    border-radius: 20px;
+}
+
+main div.card img {
+    border-radius: 20px;
+    object-fit: cover;
+    height: 250px;
+    width: 100%;
+}
+
+main div img {
+    border-radius: 20px;
+}
+
+main div.card h2 {
+    margin: 0;
+    padding: 0px 20px 4px 20px;
+    font-size: 24px;
+    text-align: center;
+}
+
+main div.card p {
+    margin: 0;
+    padding: 0 20px 20px 20px;
+    font-size: 14px;
+    line-height: 1.5; /* l'interlinea del testo */
+}
+
+main div.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap:20px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+}
+
+footer a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+footer a:hover {
+    color: #f00;
+    text-decoration: underline;
+}
+
+footer a.attivo {
+    font-weight: bold;
+}
+
+
+footer p {
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+footer nav ul {
+    margin:0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    color: #ffffff;
+}
+
+@media (max-width: 750px) { /* se la finestra ha una larghezza minore di 800px, fai lo sfondo giallo */
+    .grid {
+        margin: 40px auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* grid-template-columns: 1fr 1fr 1fr; */
+        gap: 20px;
+    }
+    .card-2 {
+        flex-direction: column; /* nella versione mobile la card con gli elementi allineati in orizzontale diventa come la prima card, con gli elementi uno sotto l'altro */
+    }
+
+    .card-2 .testo {
+        width: 100%;
+    }
+
+    .card-2 .immagine {
+        width: 100%;
+    }
+}
+
+@media (max-width: 450px) { /* se la finestra ha una larghezza minore di 400px, fai lo sfondo verde. Questa istruzione sovrascrive la precedente, se la cancello lo sfondo sarà sempre giallo */
+    .grid {
+        margin: 40px auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        /* grid-template-columns: 1fr 1fr 1fr; */
+        gap: 20px;
+    }
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+footer {
+    flex-direction: column;
+    gap: 10px;
+}
